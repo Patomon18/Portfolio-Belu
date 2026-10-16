@@ -1,0 +1,236 @@
+/* ==========================================================
+   ESTILOS PROPIOS DE LA PÁGINA
+   Esto se carga DESPUÉS de Bootstrap en el <head>, así que
+   todo lo de acá pisa los estilos por defecto de Bootstrap.
+   ========================================================== */
+
+/* Colores de la página, puestos como variables para no repetir
+   el código de color (hex) por todos lados. Si querés cambiar
+   la paleta, alcanza con tocar estos valores. */
+:root {
+  --crema: #faf3ec; /* fondo general */
+  --tinta: #2e241f; /* texto principal */
+  --oliva: #c71861; /* color principal, para botones y acentos */
+  --oliva-oscuro: #333f2a;
+  --terracota: #b4472f; /* detalles y resaltados puntuales */
+  --mostaza: #d9a441; /* chispitas de color chicas */
+  --durazno: #ffebf6; /* fondo de sección clara */
+  --durazno-2: #e7c6b4;
+}
+
+/* ------------------ Base de la página ------------------ */
+
+body {
+  background-color: var(--crema);
+  color: var(--tinta);
+  font-family: "Sora", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.fuente-titulo {
+  font-family: "Fraunces", serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Ancla suave: al tocar un link del menú, la página se desliza
+   en vez de saltar de golpe a la sección */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------ Colores reutilizables ------------------ */
+
+.texto-terracota {
+  color: var(--terracota);
+}
+.texto-oliva {
+  color: var(--oliva);
+}
+.fondo-crema {
+  background-color: var(--crema);
+}
+.fondo-durazno-suave {
+  background-color: rgba(241, 217, 199, 0.4);
+}
+.fondo-oliva-suave {
+  background-color: rgba(72, 86, 60, 0.08);
+}
+.fondo-mostaza-suave {
+  background-color: rgba(217, 164, 65, 0.18);
+}
+.fondo-terracota-suave {
+  background-color: rgba(180, 71, 47, 0.1);
+}
+
+/* ------------------ Botones propios ------------------
+   Bootstrap trae sus propios .btn-primary, .btn-outline-*, etc.,
+   pero usan el azul de siempre. Acá definimos los nuestros. */
+
+.btn-oliva {
+  background-color: var(--oliva);
+  color: var(--crema);
+  border: none;
+}
+.btn-oliva:hover {
+  background-color: var(--oliva-oscuro);
+  color: var(--crema);
+}
+
+.btn-oliva-outline {
+  background-color: transparent;
+  color: var(--tinta);
+  border: 1px solid rgba(46, 36, 31, 0.3);
+}
+.btn-oliva-outline:hover {
+  border-color: var(--tinta);
+  color: var(--tinta);
+}
+
+.btn-crema-sobre-oliva {
+  background-color: var(--crema);
+  color: var(--oliva);
+  border: none;
+}
+.btn-crema-sobre-oliva:hover {
+  background-color: #fff;
+  color: var(--oliva);
+}
+
+/* ------------------ Encabezado / menú ------------------ */
+
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: var(--durazno);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(46, 36, 31, 0.1);
+}
+
+.menu-principal a {
+  font-size: 0.95rem;
+}
+.menu-principal a:hover {
+  color: var(--oliva);
+}
+
+/* ------------------ Marco "video vertical de celular" ------------------
+   Lo usamos en el hero y en la grilla de trabajos, simulando
+   la forma de un video vertical grabado con el celular. */
+
+.marco-video {
+  aspect-ratio: 9 / 16;
+  border-radius: 1.5rem;
+  border: 4px solid rgba(46, 36, 31, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.rotar-izquierda {
+  transform: rotate(-2deg);
+}
+.rotar-derecha {
+  transform: rotate(2deg);
+}
+.marco-video:hover {
+  transform: rotate(0deg);
+}
+
+.circulo-play {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  background-color: rgba(250, 243, 236, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--oliva);
+  font-size: 1.1rem;
+}
+
+/* ------------------ Datos cortos con borde lateral ------------------
+   Los usamos en vez de tarjetas con sombra, para una onda
+   más editorial y menos "panel de app". */
+
+.dato-borde {
+  border-left: 2px solid var(--oliva);
+  padding-left: 1rem;
+}
+.dato-borde.terracota {
+  border-left-color: var(--terracota);
+}
+.dato-borde.mostaza {
+  border-left-color: var(--mostaza);
+}
+
+.dato-arriba {
+  border-top: 1px solid rgba(46, 36, 31, 0.15);
+  padding-top: 1rem;
+}
+
+/* ------------------ Servicios ------------------ */
+
+.servicio {
+  border-top: 1px solid rgba(46, 36, 31, 0.2);
+  padding-top: 1.5rem;
+}
+.servicio i {
+  font-size: 1.6rem;
+  color: var(--oliva);
+}
+
+/* ------------------ Paquetes / precios ------------------ */
+
+.paquete {
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.paquete-normal {
+  background-color: var(--crema);
+  border: 1px solid rgba(46, 36, 31, 0.15);
+}
+.paquete-destacado {
+  background-color: var(--oliva);
+  color: var(--crema);
+}
+
+/* ------------------ Formulario de contacto ------------------
+   Le sacamos el recuadro típico de los inputs y dejamos
+   solo una línea abajo, para que combine con el resto del diseño. */
+
+.campo-lineal {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(250, 243, 236, 0.4);
+  border-radius: 0;
+  color: var(--crema);
+  padding-left: 0;
+}
+.campo-lineal::placeholder {
+  color: rgba(250, 243, 236, 0.5);
+}
+.campo-lineal:focus {
+  background-color: transparent;
+  border-bottom-color: var(--crema);
+  box-shadow: none;
+  color: var(--crema);
+}
+
+.etiqueta-campo {
+  color: rgba(250, 243, 236, 0.7);
+  font-size: 0.85rem;
+}

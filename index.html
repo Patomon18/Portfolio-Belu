@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belén Arroyo — Portfolio UGC</title>
+
+    <!-- Bootstrap, solo la parte de CSS (la grilla, los botones, el formulario).
+       No sumamos el bootstrap.bundle.js porque esta página no usa nada de JS. -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap Icons: son solo una fuente de íconos + CSS, no traen JavaScript -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Tipografías: una serif con carácter para los títulos (Fraunces) y una sans para el resto (Sora) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Nuestra propia hoja de estilos, va después de Bootstrap para poder pisarlo -->
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <!-- ==========================================================
+       ENCABEZADO
+       Menú simple: en celular, los links pasan a la línea de abajo
+       solos (gracias a flex-wrap), así que no hace falta un botón
+       de "hamburguesa" con JavaScript para desplegarlo.
+       ========================================================== -->
+    <header class="encabezado">
+      <div
+        class="container d-flex flex-wrap align-items-center justify-content-between gap-3 py-3"
+      >
+        <a href="#inicio" class="fuente-titulo fs-4">Belén Arroyo</a>
+
+        <nav class="menu-principal d-flex flex-wrap gap-4">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#trabajos">Trabajos</a>
+          <a href="#paquetes">Paquetes</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a href="#contacto" class="btn btn-oliva rounded-pill px-4"
+          >Escribime</a
+        >
+      </div>
+    </header>
+
+    <!-- ==========================================================
+       HERO — lo primero que se ve al entrar
+       ========================================================== -->
+    <section id="inicio" class="container py-5 py-md-6">
+      <div class="row align-items-center g-5 py-4">
+        <!-- Columna de texto -->
+        <div class="col-lg-6">
+          <p class="texto-terracota fw-medium mb-2">
+            Creadora de contenido UGC y CM
+          </p>
+          <h1 class="fuente-titulo display-4 mb-4" style="line-height: 1.05">
+            Contenido que se siente hecho por una amiga, no por una marca.
+          </h1>
+          <p class="mb-4" style="max-width: 32rem; opacity: 0.85">
+            Grabo videos, unboxings y reseñas para marcas que quieren vender sin
+            sonar a publicidad. Contenido pensado tanto para redes como para
+            pauta paga.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-5">
+            <a href="#trabajos" class="btn btn-oliva rounded-pill px-4 py-2"
+              >Ver mi portfolio</a
+            >
+            <a
+              href="#contacto"
+              class="btn btn-oliva-outline rounded-pill px-4 py-2"
+              >Escribime</a
+            >
+          </div>
+
+          <!-- Tres datos cortos, con una línea de color en vez de tarjetas -->
+          <div class="row row-cols-3 g-3">
+            <div class="col">
+              <div class="dato-borde terracota">
+                <p class="fuente-titulo fs-3 mb-0">+50</p>
+                <p class="small mb-0" style="opacity: 0.7">videos entregados</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="dato-borde">
+                <p class="fuente-titulo fs-3 mb-0">12</p>
+                <p class="small mb-0" style="opacity: 0.7">
+                  marcas acompañadas
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="dato-borde mostaza">
+                <p class="fuente-titulo fs-3 mb-0">12h</p>
+                <p class="small mb-0" style="opacity: 0.7">
+                  tiempo de respuesta
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna del "video" — un marco vertical simulando un celular.
+           Reemplazá este div por una <img> o metele un <video> real cuando tengas tu contenido. -->
+        <div
+          class="col-lg-6 d-flex justify-content-center justify-content-lg-end"
+        >
+          <div
+            class="marco-video rotar-derecha fondo-durazno-suave"
+            style="width: 17rem"
+          >
+            <video
+              class="object-fit-scale w-100 h-auto rounded-4"
+              src="/sources/VID_20261004_200335_885_bsl.mp4"
+              autoplay
+              loop
+              controls
+            ></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+       SOBRE MÍ
+       ========================================================== -->
+    <section
+      id="sobre-mi"
+      class="container py-5"
+      style="border-top: 1px solid rgba(46, 36, 31, 0.1)"
+    >
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <h2 class="fuente-titulo display-6 mb-4" style="max-width: 28rem">
+            Antes de la cámara, después de la cámara
+          </h2>
+          <p class="mb-3" style="max-width: 34rem; opacity: 0.85">
+            Soy Belén, creadora de contenido en potencia. Antes de dedicarme a
+            esto trabajaba en marketing, así que además de grabar entiendo lo
+            que una marca necesita mostrar: un beneficio claro, en pocos
+            segundos, sin perder calidez.
+          </p>
+          <p style="max-width: 34rem; opacity: 0.85">
+            Trabajo sobre todo con marcas de belleza, moda, hogar y bienestar,
+            pero me adapto rápido a productos nuevos. Mi objetivo siempre es el
+            mismo: que quien mire el video sienta que le está hablando una
+            persona, no una campaña.
+          </p>
+        </div>
+
+        <!-- Lista de datos, con línea arriba en vez de tarjetas con sombra -->
+        <div class="col-lg-4 d-flex flex-column gap-4">
+          <div class="dato-arriba">
+            <p class="fuente-titulo fs-3 mb-0">1 año</p>
+            <p class="small mb-0" style="opacity: 0.7">creando contenido UGC</p>
+          </div>
+          <div class="dato-arriba">
+            <p class="fuente-titulo fs-5 mb-0">Belleza · Moda · Hogar</p>
+            <p class="small mb-0" style="opacity: 0.7">
+              nichos donde más trabajo
+            </p>
+          </div>
+          <div class="dato-arriba">
+            <p class="fuente-titulo fs-3 mb-0">100%</p>
+            <p class="small mb-0" style="opacity: 0.7">
+              contenido grabado y editado por mí
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+       SERVICIOS
+       ========================================================== -->
+    <section
+      id="servicios"
+      class="fondo-durazno-suave"
+      style="border-top: 1px solid rgba(46, 36, 31, 0.1)"
+    >
+      <div class="container py-5">
+        <h2 class="fuente-titulo display-6 mb-5" style="max-width: 26rem">
+          En qué te puedo ayudar
+        </h2>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="servicio">
+              <i class="bi bi-camera-reels d-block mb-3"></i>
+              <h3 class="fuente-titulo fs-4 mb-2">Videos UGC para redes</h3>
+              <p style="max-width: 24rem; opacity: 0.8">
+                Reels y TikToks grabados como contenido real de una persona,
+                pensados tanto para tu feed como para correr en pauta paga.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="servicio">
+              <i class="bi bi-box-seam d-block mb-3"></i>
+              <h3 class="fuente-titulo fs-4 mb-2">
+                Unboxing y reseña de producto
+              </h3>
+              <p style="max-width: 24rem; opacity: 0.8">
+                Recibo tu producto, lo pruebo frente a cámara y cuento mi
+                experiencia real, con guion o de forma espontánea.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="servicio">
+              <i class="bi bi-camera d-block mb-3"></i>
+              <h3 class="fuente-titulo fs-4 mb-2">Fotografía de producto</h3>
+              <p style="max-width: 24rem; opacity: 0.8">
+                Fotos con luz natural y una estética prolija, listas para tu
+                catálogo, tu web o tus redes.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="servicio">
+              <i class="bi bi-megaphone d-block mb-3"></i>
+              <h3 class="fuente-titulo fs-4 mb-2">Contenido para pauta paga</h3>
+              <p style="max-width: 24rem; opacity: 0.8">
+                Piezas pensadas con hook, ritmo y varias variantes de guion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+       TRABAJOS (portfolio) — la parte más vistosa de la página
+       ========================================================== -->
+    <section id="trabajos" class="container py-5">
+      <h2 class="fuente-titulo display-6 mb-2">Algunos trabajos</h2>
+      <p class="mb-5" style="max-width: 26rem; opacity: 0.7">
+        Una selección de videos hechos para distintas marcas y rubros.
+      </p>
+
+      <!-- Reemplazá cada marco por tu propio video o una miniatura real -->
+      <div class="row row-cols-2 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="marco-video rotar-izquierda fondo-durazno-suave">
+            <video
+              class="object-fit-scale w-100 h-auto rounded-4"
+              src="sources/VID_20261015_162038_118_bsl (1).mp4"
+              controls
+            ></video>
+          </div>
+        </div>
+        <div class="col">
+          <div class="marco-video rotar-derecha fondo-oliva-suave">
+            <video
+              class="object-fit-scale w-100 h-auto rounded-4"
+              src="/sources/6621fe727e7434c06fd7ea80606d34b2.mp4"
+              controls
+            ></video>
+          </div>
+        </div>
+        <div class="col">
+          <div class="marco-video rotar-izquierda fondo-mostaza-suave">
+            <video
+              class="object-fit-scale w-100 h-auto rounded-4"
+              src="/sources/video 3 portfolio (1).mp4"
+              controls
+            ></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+       MARCAS
+       ========================================================== -->
+    <section
+      class="fondo-oliva-suave"
+      style="
+        border-top: 1px solid rgba(46, 36, 31, 0.1);
+        border-bottom: 1px solid rgba(46, 36, 31, 0.1);
+      "
+    >
+      <div class="container py-5 text-center">
+        <p class="small mb-4" style="opacity: 0.6">
+          Marcas con las que trabajé
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-4">
+          <div>
+            <a
+              href="https://www.instagram.com/lovely.pandi.shop?exln=Ynp1eG0ydnMza244"
+              class="fuente-titulo fs-5"
+              style="opacity: 0.5"
+              >@lovely.pandi.shop</a
+            >
+            <!-- <span class="fuente-titulo fs-5" style="opacity: 0.5"
+              >@lovely.pandi.shop</span
+            > -->
+          </div>
+          <div>
+            <a
+              href="https://www.instagram.com/papeleriabonita.tuc?cplk=dXBvbzhwMjRpM2Vv"
+              class="fuente-titulo fs-5"
+              style="opacity: 0.5"
+              >@papeleriabonita.tuc</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.instagram.com/destinodivino_ttucuman?dlrf=MW9wd2tsbmxmdnZmbA=="
+              class="fuente-titulo fs-5"
+              style="opacity: 0.5"
+              >@destinodivino_ttucuman</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.instagram.com/norumi.beauty?rpxt=MTdlanVnZDdiZ2Rk"
+              class="fuente-titulo fs-5"
+              style="opacity: 0.5"
+              >@norumi.beauty</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.instagram.com/wan_burgerpapas?exln=MTZkeW90czEwNnRiMA=="
+              class="fuente-titulo fs-5"
+              style="opacity: 0.5"
+              >@wan.burgerpapas</a
+            >
+          </div>
+
+          <div>
+            <a
+              href="https://www.instagram.com/krisanta.moda?rpxt=MTAyazdna2V2Y3d4bA=="
+              class="fuente-titulo fs-5"
+              style="opacity: 0.5"
+              >@krisanta.moda</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.instagram.com/garnier.arg.uy?obrf=MTM2aTVlb2RremM0cA=="
+              class="fuente-titulo fs-5"
+              style="opacity: 0.5"
+              >@garnier.arg.uy</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+       OPINIONES (testimonios)
+       ========================================================== -->
+    <section class="container py-5">
+      <h2 class="fuente-titulo display-6 mb-5" style="max-width: 26rem">
+        Lo que dicen las marcas
+      </h2>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="fondo-durazno-suave p-4 rounded-4 h-100">
+            <p
+              class="fuente-titulo texto-terracota mb-2"
+              style="font-size: 2.5rem; line-height: 1"
+            >
+              “
+            </p>
+            <p class="mb-4" style="opacity: 0.85">
+              Belu entendió mi marca desde el primer llamado. El video se sintió
+              natural, no forzado, y terminó siendo el que mejor funcionó en
+              pauta ese mes.
+            </p>
+            <p class="small mb-0">
+              <span class="fw-medium">Sara</span>
+              <span style="opacity: 0.6"> · @papeleriabonita.tuc</span>
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="fondo-oliva-suave p-4 rounded-4 h-100">
+            <p
+              class="fuente-titulo texto-terracota mb-2"
+              style="font-size: 2.5rem; line-height: 1"
+            >
+              “
+            </p>
+            <p class="mb-4" style="opacity: 0.85">
+              Entregó todo en tiempo y forma, con varias variantes de guion para
+              elegir. Súper profesional y buena onda en todo el proceso.
+            </p>
+            <p class="small mb-0">
+              <span class="fw-medium">Conti</span>
+              <span style="opacity: 0.6"> · @destinodivino_ttucuman</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+       PAQUETES (precios)
+       ========================================================== -->
+    <!-- <section
+      id="paquetes"
+      class="fondo-durazno-suave"
+      style="border-top: 1px solid rgba(46, 36, 31, 0.1)"
+    >
+      <div class="container py-5">
+        <h2 class="fuente-titulo display-6 mb-2">Paquetes</h2>
+        <p class="mb-5" style="max-width: 28rem; opacity: 0.7">
+          Precios de referencia, se pueden ajustar según el producto y el
+          alcance del proyecto.
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="paquete paquete-normal">
+              <h3 class="fuente-titulo fs-3 mb-1">Esencial</h3>
+              <p class="mb-4" style="opacity: 0.6">
+                <span class="fuente-titulo fs-2">$150</span> por video
+              </p>
+              <ul class="list-unstyled flex-grow-1 mb-4">
+                <li class="small mb-2">1 video vertical de hasta 45 seg</li>
+                <li class="small mb-2">1 ronda de ajustes</li>
+                <li class="small mb-2">Entrega en 3 días hábiles</li>
+                <li class="small mb-2">Derechos de uso orgánico</li>
+              </ul>
+              <a href="#contacto" class="btn btn-oliva rounded-pill mt-auto"
+                >Elegir esencial</a
+              >
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="paquete paquete-destacado">
+              <h3 class="fuente-titulo fs-3 mb-1">Impulso</h3>
+              <p class="mb-4" style="opacity: 0.8">
+                <span class="fuente-titulo fs-2">$280</span> por video
+              </p>
+              <ul class="list-unstyled flex-grow-1 mb-4">
+                <li class="small mb-2">1 video vertical de hasta 60 seg</li>
+                <li class="small mb-2">2 rondas de ajustes</li>
+                <li class="small mb-2">Entrega en 48 horas</li>
+                <li class="small mb-2">
+                  Derechos de uso orgánico y pauta paga
+                </li>
+              </ul>
+              <a
+                href="#contacto"
+                class="btn btn-crema-sobre-oliva rounded-pill mt-auto"
+                >Elegir impulso</a
+              >
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="paquete paquete-normal">
+              <h3 class="fuente-titulo fs-3 mb-1">Completo</h3>
+              <p class="mb-4" style="opacity: 0.6">
+                <span class="fuente-titulo fs-2">$450</span> por par de videos
+              </p>
+              <ul class="list-unstyled flex-grow-1 mb-4">
+                <li class="small mb-2">2 videos con guiones distintos</li>
+                <li class="small mb-2">2 rondas de ajustes por video</li>
+                <li class="small mb-2">Entrega en 4 días hábiles</li>
+                <li class="small mb-2">
+                  Derechos de uso orgánico y pauta paga
+                </li>
+              </ul>
+              <a href="#contacto" class="btn btn-oliva rounded-pill mt-auto"
+                >Elegir completo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ==========================================================
+       CONTACTO
+       Formulario simple sin JavaScript: usa el truco de "mailto"
+       para abrir el correo del visitante con el mensaje cargado.
+       Si más adelante querés que los mensajes lleguen de verdad
+       a tu bandeja sin depender del correo del visitante, podés
+       cambiar el "action" de abajo por un endpoint de Formspree
+       (https://formspree.io) — ellos también funcionan sin JS,
+       solo hay que apuntar el formulario a la URL que te dan.
+       ========================================================== -->
+    <section
+      id="contacto"
+      style="background-color: var(--oliva); color: var(--crema)"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h2 class="fuente-titulo display-6 mb-4" style="max-width: 24rem">
+              ¿Hacemos contenido juntas?
+            </h2>
+            <p class="mb-4" style="max-width: 24rem; opacity: 0.8">
+              Contame sobre tu marca y tu producto, y te respondo con ideas de
+              contenido y disponibilidad en menos de 24 horas.
+            </p>
+
+            <div class="d-flex flex-column gap-3 mb-4">
+              <a
+                href="mailto:hola@belenarroyo.com"
+                class="d-flex align-items-center gap-2"
+              >
+                <i class="bi bi-envelope"></i> belenarroyo2626@gmail.com
+              </a>
+              <!-- Cambiá el número por el tuyo, con código de país y sin espacios ni signos -->
+              <a
+                href="https://wa.me/5493816835232"
+                class="d-flex align-items-center gap-2"
+              >
+                <i class="bi bi-chat-dots"></i> Escribime por WhatsApp
+              </a>
+            </div>
+
+            <div class="d-flex gap-3 fs-5">
+              <a
+                href="https://www.instagram.com/cloudi.bel_?obrf=MTQ2MnNpdmZmdGFoZQ=="
+                aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="http://tiktok.com/@cloudibel_" aria-label="TikTok"
+                ><i class="bi bi-tiktok"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-6">
+            <form action="mailto:" method="post" enctype="text/plain">
+              <div class="mb-4">
+                <label for="nombre" class="etiqueta-campo d-block mb-1"
+                  >Tu nombre</label
+                >
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="form-control campo-lineal"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="etiqueta-campo d-block mb-1"
+                  >Tu email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control campo-lineal"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="mensaje" class="etiqueta-campo d-block mb-1"
+                  >Contame sobre tu proyecto</label
+                >
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="3"
+                  class="form-control campo-lineal"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-crema-sobre-oliva rounded-pill px-4 py-2"
+              >
+                Enviar mensaje
+              </button>
+            </form>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+       PIE DE PÁGINA
+       ========================================================== -->
+    <footer
+      class="container py-4 d-flex flex-wrap justify-content-between align-items-center gap-3 small"
+      style="opacity: 0.6"
+    >
+      <p class="mb-0">© 2026 Belén Arroyo</p>
+      <div class="d-flex gap-4">
+        <a
+          href="https://www.instagram.com/cloudi.bel_?obrf=MTQ2MnNpdmZmdGFoZQ=="
+          >Instagram</a
+        >
+        <a href="http://tiktok.com/@cloudibel_">TikTok</a>
+        <a href="mailto:belenarroyo2626@gmail.com">Email</a>
+      </div>
+    </footer>
+  </body>
+</html>
